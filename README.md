@@ -1,4 +1,4 @@
-# docker-zerotier-moon
+# docker-zerotier
 
 仅自用
 
@@ -27,7 +27,7 @@ services:
 docker run \
   -d \
   --restart unless-stopped \
-  --name zerotier \
+  --name zerotier-moom \
   --device /dev/net/tun \
   --net host \
   --cap-add NET_ADMIN \
