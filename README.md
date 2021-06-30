@@ -7,7 +7,7 @@
 version: "3.1"
 services:
   zerotier:
-    image: superng6/zerotier:moon
+    image: zerotier:moon-latest
     container_name: zerotier-moom
     restart: unless-stopped
     cap_add:
