@@ -1,10 +1,5 @@
 FROM alpine:latest
-
 LABEL maintainer="SuperNG6"
-
 RUN apk add --no-cache zerotier-one
-
-COPY startup.sh /startup.sh
-EXPOSE 9993/udp
-
-ENTRYPOINT ["/startup.sh"]
+COPY entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
