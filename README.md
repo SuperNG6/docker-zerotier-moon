@@ -63,7 +63,7 @@ services:
 docker run \
   -d \
   --restart unless-stopped \
-  --name zerotier-one \
+  --name zerotier \
   --device /dev/net/tun \
   --net host \
   --cap-add NET_ADMIN \
@@ -74,4 +74,5 @@ docker run \
 ```
 
 ## 进入容器连接MOON
+docker exec -i zerotier zerotier-cli join *
 docker exec -i zerotier zerotier-cli orbit * *
