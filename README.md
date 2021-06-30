@@ -1,6 +1,7 @@
 # docker-zerotier
 
-仅自用
+仅自用  
+https://hub.docker.com/r/superng6/zerotier
 
 # MOON 公网服务端
 ```yaml
@@ -32,6 +33,7 @@ docker run \
   --net host \
   --cap-add NET_ADMIN \
   --cap-add SYS_ADMIN \
+  -v /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime:ro \
   -v $PWD/config:/var/lib/zerotier-one \
   superng6/zerotier:moon \
   -4 1.2.3.4
@@ -66,6 +68,7 @@ docker run \
   --net host \
   --cap-add NET_ADMIN \
   --cap-add SYS_ADMIN \
+  -v /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime:ro \
   -v $PWD/config:/var/lib/zerotier-one \
   superng6/zerotier
 ```
