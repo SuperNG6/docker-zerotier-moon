@@ -32,7 +32,6 @@ jobs:
 
       # Build and push
       - name: Build dockerfile
-        if: steps.set-version.outputs.status == 'success'
         uses: docker/build-push-action@v2
         with:
           file: ./Dockerfile
@@ -43,7 +42,6 @@ jobs:
             superng6/zerotier:latest
 
       - name: Build dockerfile moon
-        if: steps.set-version.outputs.status == 'success'
         uses: docker/build-push-action@v2
         with:
           file: ./Dockerfile-moon
